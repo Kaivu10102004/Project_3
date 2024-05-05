@@ -1,0 +1,192 @@
+{
+	"compiler": {
+		"version": "0.8.19+commit.7dd6d404"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "previousOwner",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "OwnershipTransferred",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "creditor",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "add_IOU",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "user",
+						"type": "address"
+					}
+				],
+				"name": "getTotalOwed",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "debtor",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "creditor",
+						"type": "address"
+					}
+				],
+				"name": "lookup",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "renounceOwnership",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "transferOwnership",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {
+				"owner()": {
+					"details": "Returns the address of the current owner."
+				},
+				"renounceOwnership()": {
+					"details": "Leaves the contract without owner. It will not be possible to call `onlyOwner` functions anymore. Can only be called by the current owner. NOTE: Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner."
+				},
+				"transferOwnership(address)": {
+					"details": "Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner."
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/IOU.sol": "IOU"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/Context.sol": {
+			"keccak256": "0x90523189135f3c15b50663728158efa8d9f3db86f10565c826670bd7edc541be",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://bc2de434fd67030b62ed2f615eabc1b7268bf730cccd5739985e5f549371b86f",
+				"dweb:/ipfs/QmR8ZwWucqG1kGMeoHDT57XpAVAcZpxMjJxUFvnSJvW3Mx"
+			]
+		},
+		"contracts/IOU.sol": {
+			"keccak256": "0xb06864708c6e760c74cd43d82e9b71ae99d972b2f1f410fee1fa3a07e834b464",
+			"urls": [
+				"bzz-raw://b794b9f4d91f072c3e621887e26376cc406afa2699975daca8ce6045a12833e0",
+				"dweb:/ipfs/QmXcXRR2NJ3AswcCcMAaeyKUKYb2imLWc8b73NsEukUhzC"
+			]
+		},
+		"contracts/ownable.sol": {
+			"keccak256": "0xb1b80cb2ff0366608520ca1ea50983129592be4f1dc8444fad0c346da9a3e4c4",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://1f5e854b14a0c8d4e50bad868717d61f5bec54ef12a2352d17e67dd30a4596a8",
+				"dweb:/ipfs/QmTHbZw1p3saZNVvFmydKJo5dVNNBtJ6niVXyHt51i6yNM"
+			]
+		},
+		"contracts/safemath.sol": {
+			"keccak256": "0x6a44f256fb8d77cae73a7acb22cfc82cb8d33140e2ebeee71c783e8e5f410f96",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://3446ef4faf0bd39d0c552ed2864fcc3e3fc2a7727fbb33e18d43aed12c99e4d8",
+				"dweb:/ipfs/QmezeJZwkqZUp9JSFrqwDbUPKkZcoy1Apoiv4cDwzQQCnW"
+			]
+		}
+	},
+	"version": 1
+}
